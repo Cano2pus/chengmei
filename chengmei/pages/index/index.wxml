@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+<!-- 轮播图 -->
+  <swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}">
+    <block wx:for="{{banner}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item.pic}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 跳转搜索界面 -->
+  <view class="search">
+    <button type="default" bindtap="searchbtn"><i class="iconfont icon-search"></i> 搜索</button>
+  </view>
+  <!-- 分类 -->
+  <view class="classify">
+    <view class="classify-item" wx:for="{{type}}" wx:key="index" bindtap="tolist" data-classify="{{item}}">
+      <view class="classify-itembox">
+        <image  src="{{item.good_type_img}}" mode="aspectFit"></image>
+        <text class="type-name">{{item.type_name}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 商品列表 -->
+  <view class="good-list" wx:for="{{list}}" wx:key="index">
+    <view class="good-title">
+      <view class="good-title-txt">{{item.name}}</view>
+      <view class="more">更多 <icon class="iconfont icon-arrow"></icon></view>
+    </view>
+    <view class="good-listbox">
+      <view class="good-list-item" bindtap="todetail" data-item="{{good}}" wx:for="{{item.children}}" wx:for-item="good" wx:for-index="index2" wx:key="index2">
+        <view class="good-list-itembox">
+          <image src="{{good.img}}"  mode="aspectFit"></image>
+          <view class="good-name">{{good.good_name}}</view>
+          <view class="good-price">￥{{good.price}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

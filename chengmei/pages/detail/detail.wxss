@@ -1,0 +1,125 @@
+/* pages/detail/detail.wxss */
+@import '../../wxParse/wxParse.wxss';
+.swiper{
+  height: 250px;
+  width: 100%;
+}
+.container{
+  padding-bottom: 70px;
+}
+
+.good-info{
+  padding: 10px;
+}
+.good-name{
+  font-size: 15px;
+  color: #333;
+}
+.good-price{
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
+}
+.good-price text{
+  font-size: 16px;
+}
+
+
+.num{
+  width: 100%;
+  padding: 10px;
+  border-top: 10px solid #f1f1f1;
+  border-bottom: 10px solid #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.num-input{
+  display: flex;
+}
+.num input{
+  width: 60px;
+  background-color: #f1f1f1;
+  text-align: center;
+  margin: 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+.num button{
+  border: 0;
+  background-color: #f1f1f1;
+  padding: 0 10px;
+}
+.num button::after{
+  border: 0;
+}
+.num-text{
+  font-size: 16px;
+  color: #333;
+}
+
+
+.good-detail{
+  width: 100%;
+}
+.good-tab{
+  width: 100%;
+}
+.good-tab text{
+  display: inline-block;
+  width: 50%;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 16px;
+}
+.good-tab .curr{
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+.good-html{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 5px 20px;
+  background-color: #f1f1f1;
+}
+
+
+
+/* 底部购买栏 */
+.bottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* height: 50px; */
+  border-top: 1px solid #aaa;
+  z-index: 100;
+  background-color: #f1f1f1;
+}
+.bottom .home{
+  width: 20%;
+  display: inline-block;
+  border-right: 1px solid #aaa;
+}
+.bottom .home image{
+  width: 100%;
+  height: 20px;
+}
+.bottom .home view{
+  font-size: 14px;
+  text-align: center;
+}
+
+
+.bottom .buy{
+  width: 78%;
+  display: inline-block;
+  text-align: center;
+}
+.bottom .buy button{
+  background-color: red;
+  font-size: 16px;
+  color: white;
+}

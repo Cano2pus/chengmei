@@ -1,0 +1,111 @@
+/**index.wxss**/
+
+.search{
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+}
+.search button{
+  font-size: 15px;
+  background-color: #fff;
+  color: #ccc;
+  border: 0;
+}
+
+.classify{
+  width: 100%;
+  background-color: #fff;
+}
+.classify-item{
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+}
+.classify-itembox{
+  margin: 20px;
+}
+.classify-item image{
+  width: 100%;
+  height: 80px;
+}
+.classify-item .type-name{
+  width: 100%;
+  display: block;
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+}
+
+
+.good-list{
+  width: 100%;
+}
+.good-title{
+  position: relative;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+.good-title-txt{
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  letter-spacing: 3px;
+}
+.good-title-txt::after, .good-title-txt::before{
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #666;
+  position: absolute;
+  top: 30px;
+}
+.good-title-txt::after{
+  right: 35%;
+}
+.good-title-txt::before{
+  left: 35%;
+}
+.good-title .more{
+  width: 50px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 13px;
+  color: #999;
+}
+.good-listbox{
+  width: 100%;
+}
+.good-listbox image{
+  width: 100%;
+  height: 100px;
+}
+.good-list-item{
+  width: 33.333%;
+  display: inline-block;
+  vertical-align: top;
+}
+.good-list-itembox{
+  margin: 10px;
+}
+.good-name{
+  font-size: 14px;
+  color: #666;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.good-price{
+  font-size: 15px;
+  color: red;
+  margin-top: 7px;
+}
+
+
+
+
+.icon-arrow{
+  font-size: 13px;
+}

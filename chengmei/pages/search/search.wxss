@@ -1,0 +1,27 @@
+/* pages/search/search.wxss */
+.container{
+  background-color: #f1f1f1;
+}
+.top{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.top input{
+  padding: 5px 10px;
+  border: 1px solid #eee;
+  background-color: #ffffff;
+  border-radius: 4px;
+  width: 85%;
+  font-size: 14px;
+}
+.top text{
+  width: 15%;
+  display: inline-block;
+  font-size: 16px;
+  color: #23c27c;
+  text-align: center;
+  line-height: 40px;
+}

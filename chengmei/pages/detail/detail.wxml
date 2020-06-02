@@ -1,0 +1,39 @@
+<!--pages/detail/detail.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="container">
+  <swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}">
+    <block wx:for="{{banner}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="good-info">
+    <view class="good-name">{{good.good_name}}</view>
+    <view class="good-price">￥<text>{{good.price}}</text></view>
+  </view>
+  <view class="num">
+    <view class="num-text">数量</view>
+    <view class="num-input">
+      <button size="mini" type="default" bindtap="reduce">-</button>
+      <input value="{{num}}" bindinput="bindinput"></input>
+      <button size="mini" type="default" bindtap="add">+</button>
+    </view>
+  </view>
+  <view class="good-detail">
+    <view class="good-tab">
+      <text class="curr">商品详情</text><text>商品参数</text>
+    </view>
+    <view class="good-html">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="home" bindtap="home">
+      <image src="../../assets/img/home.png" mode="aspectFit"></image>
+      <view>首页</view>
+    </view><view class="buy">
+      <button size="mini">立即购买</button>
+    </view>
+  </view>
+</view>

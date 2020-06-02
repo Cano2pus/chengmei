@@ -1,0 +1,7 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+  <view class="top">
+    <input bindinput="setSearch"></input>
+    <text size="mini">取消</text>
+  </view>
+</view>

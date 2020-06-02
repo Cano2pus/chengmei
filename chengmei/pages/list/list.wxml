@@ -1,0 +1,23 @@
+<!--pages/list/list.wxml-->
+<view class="container">
+  <view class="top">
+    <scroll-view scroll-x="true" class="scroll-top">
+    <view bindtap="selectAll" class="{{typeid == 0? 'curr': ''}}">全部</view>
+    <view bindtap="selectType" data-typeid="{{item.good_type_id}}" wx:for="{{type.children}}" wx:key="index" class="{{typeid == item.good_type_id? 'curr': ''}}">{{item.type_name}}</view>
+  </scroll-view>
+  <view class="filter">
+    <text class="{{filter == 1? 'curr': ''}}" bindtap="setfilter" data-i="1">综合</text>
+    <text class="{{filter == 2? 'curr': ''}}" bindtap="setfilter" data-i="2">最新</text>
+    <text class="priceitem {{priceSort}} {{filter == 3? 'curr': ''}}" bindtap="setfilter" data-i="3">价格</text>
+  </view>
+  </view>
+  <view class="listbox">
+    <view class="list-item" wx:for="{{goodlist}}" wx:key="index" bindtap="todetail" data-item="{{item}}">
+      <view class="list-itembox">
+        <image src="{{item.img}}" mode="aspectFit"></image>
+        <view class="good-name">{{item.good_name}}</view>
+        <view class="good-price">{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+</view>
