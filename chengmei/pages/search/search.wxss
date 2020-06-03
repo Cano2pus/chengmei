@@ -1,12 +1,17 @@
 /* pages/search/search.wxss */
+page{
+  height: 100%;
+}
 .container{
   background-color: #f1f1f1;
+  display: block;
 }
 .top{
   width: 100%;
   padding: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
 }
 .top input{
@@ -24,4 +29,61 @@
   color: #23c27c;
   text-align: center;
   line-height: 40px;
+}
+
+
+.listbox{
+  width: 100%;
+  background-color: #f1f1f1;
+  padding-bottom: 20px;
+}
+.list-item{
+  width: 50%;
+  display: inline-block;
+}
+.list-item image{
+  width: 100%;
+  height: 200px;
+}
+.list-itembox{
+  margin: 5px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.good-name{
+  font-size: 15px;
+  color: #333;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.good-price{
+  color: red;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+
+.history{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.history-top{
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.history-item text{
+  margin: 10px;
+  padding: 5px 10px;
+  display:inline-block ;
+  border-radius: 4px;
+  background-color: #c6c6c6;
+  color: #333;
+  font-size: 14px;
 }

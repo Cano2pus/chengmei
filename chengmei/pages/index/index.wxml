@@ -10,7 +10,7 @@
   </swiper>
   <!-- 跳转搜索界面 -->
   <view class="search">
-    <button type="default" bindtap="searchbtn"><i class="iconfont icon-search"></i> 搜索</button>
+    <view bindtap="searchbtn"><i class="iconfont icon-search"></i> 搜索</view>
   </view>
   <!-- 分类 -->
   <view class="classify">

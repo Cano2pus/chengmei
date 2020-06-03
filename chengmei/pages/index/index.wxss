@@ -6,11 +6,13 @@
   box-sizing: border-box;
   background-color: #f1f1f1;
 }
-.search button{
+.search view{
   font-size: 15px;
   background-color: #fff;
   color: #ccc;
-  border: 0;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
 }
 
 .classify{
@@ -23,10 +25,11 @@
   vertical-align: top;
 }
 .classify-itembox{
-  margin: 20px;
+  margin: 10px;
+  text-align: center;
 }
 .classify-item image{
-  width: 100%;
+  width: 80%;
   height: 80px;
 }
 .classify-item .type-name{

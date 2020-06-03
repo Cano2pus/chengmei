@@ -1,7 +1,25 @@
 <!--pages/search/search.wxml-->
 <view class="container">
   <view class="top">
-    <input bindinput="setSearch"></input>
-    <text size="mini">取消</text>
+    <input bindinput="setSearch" bindconfirm="searchSubmit" value="{{search}}"></input>
+    <text size="mini" bindtap="home">取消</text>
+  </view>
+  <view class="history">
+    <view class="history-top">
+      <text>搜索历史</text>
+      <icon class="iconfont icon-delete"></icon>
+    </view>
+    <view class="history-item">
+      <text wx:for="{{history}}" wx:key="index" bindtap="searchItem" data-search="{{item}}">{{item}}</text>
+    </view>
+  </view>
+  <view class="listbox">
+    <view class="list-item" wx:for="{{goodlist}}" wx:key="index" bindtap="todetail" data-item="{{item}}">
+      <view class="list-itembox">
+        <image src="{{item.img}}" mode="aspectFit"></image>
+        <view class="good-name">{{item.good_name}}</view>
+        <view class="good-price">{{item.price}}</view>
+      </view>
+    </view>
   </view>
 </view>

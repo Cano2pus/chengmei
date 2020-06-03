@@ -1,7 +1,7 @@
 <!--pages/my/my.wxml-->
 <view class="container">
   <view class="users">
-    <button open-type="getUserInfo" size="mini">登录</button>
+    <button open-type="getUserInfo" size="mini" bindtap="getinfo">登录</button>
     <view class="addr"><icon class="iconfont icon-addressfill"></icon>收货地址</view>
   </view>
   <view class="order">
