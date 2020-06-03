@@ -1,0 +1,93 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1653800",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e566",
+      "unicode_decimal": 58726
+    },
+    {
+      "icon_id": "2867359",
+      "name": "栏目",
+      "font_class": "lanmu",
+      "unicode": "e6de",
+      "unicode_decimal": 59102
+    },
+    {
+      "icon_id": "3094572",
+      "name": "banner",
+      "font_class": "banner",
+      "unicode": "e78d",
+      "unicode_decimal": 59277
+    },
+    {
+      "icon_id": "3794767",
+      "name": "商品",
+      "font_class": "shangpin",
+      "unicode": "e730",
+      "unicode_decimal": 59184
+    },
+    {
+      "icon_id": "3994077",
+      "name": "coupon",
+      "font_class": "coupon",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "5250460",
+      "name": "about us",
+      "font_class": "aboutus",
+      "unicode": "e54e",
+      "unicode_decimal": 58702
+    },
+    {
+      "icon_id": "8889993",
+      "name": "类目 品类 分类 类别.2",
+      "font_class": "leimupinleifenleileibie",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "10052664",
+      "name": "促销",
+      "font_class": "market",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
+    },
+    {
+      "icon_id": "10502298",
+      "name": "上架",
+      "font_class": "renwu",
+      "unicode": "e6d5",
+      "unicode_decimal": 59093
+    },
+    {
+      "icon_id": "10684016",
+      "name": "广告管理",
+      "font_class": "guanggao",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "12327097",
+      "name": "admin",
+      "font_class": "admin",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "13505175",
+      "name": "list",
+      "font_class": "list",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    }
+  ]
+}
