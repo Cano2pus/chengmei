@@ -55,5 +55,17 @@ Page({
     wx.switchTab({
       url: '../index/index',
     })
+  },
+  buy(){
+    let buyInfo = {
+       img: this.data.banner[0],
+       name: this.data.good.good_name,
+       num: this.data.num,
+       price: this.data.good.price
+    }
+    
+    wx.navigateTo({
+      url: '../buy/buy?id=' + JSON.stringify(buyInfo),
+    })
   }
 })

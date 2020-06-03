@@ -33,7 +33,7 @@
       <image src="../../assets/img/home.png" mode="aspectFit"></image>
       <view>首页</view>
     </view><view class="buy">
-      <button size="mini">立即购买</button>
+      <button size="mini" bindtap="buy">立即购买</button>
     </view>
   </view>
 </view>

@@ -4,6 +4,9 @@
   height: 200px;
   background-color: orange;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .users button{
   font-size: 12px;
@@ -13,10 +16,15 @@
   background-color: red;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  position: absolute;
-  right: 0;
   font-size: 16px;
   color: white;
+  padding: 3px 0;
+}
+.users .addr text{
+  display: inline-block;
+  vertical-align: top;
+  line-height: 27px;
+  margin-left: 5px;
 }
 .users .iconfont{
   font-size: 20px;
@@ -54,4 +62,22 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+
+.info{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.info image{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.info text{
+  margin-left: 10px;
+  font-size: 18px;
+  color: white;
 }

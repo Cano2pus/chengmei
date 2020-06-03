@@ -6,22 +6,44 @@ Page({
    * 页面的初始数据
    */
   data: {
-    info: null
+    info: null,
+    avatarUrl: "http://img3.imgtn.bdimg.com/it/u=2395693894,1549853405&fm=26&gp=0.jpg"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    this.setData({
-      info: app.globalData.userInfo
-    })
+  onLoad: function () {
+    console.log(app.globalData.userInfo);
+    
+    if(app.globalData.userInfo != null){
+      this.setData({
+        info: app.globalData.userInfo,
+        avatarUrl: app.globalData.userInfo.icon
+      })
+    }
   },
-  getinfo(){
-    wx.getUserInfo({
-      success: res => {
-        app.globalData.userInfo = res.userInfo;
+  getUserInfo(e) {
+    app.globalData.userInfo = e.detail.userInfo
+    let openId = wx.getStorageSync('openid');
+    wx.request({
+      url: 'http://chengmei_dev.wanxikeji.cn/api/register',
+      data: {
+        nick_name: e.detail.userInfo.nickName,
+        icon: e.detail.userInfo.avatarUrl,
+        sex: e.detail.userInfo.gender,
+        openid: openId
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success(res){
+        console.log(res);
       }
     })
+    // this.setData({
+    //   info: e.detail.userInfo,
+    //   avatarUrl: e.detail.userInfo.avatarUrl
+    // })
   }
 })
