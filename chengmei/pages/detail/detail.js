@@ -1,5 +1,6 @@
 // pages/detail/detail.js
 var wxParse = require("../../wxParse/wxParse");
+const app = getApp();
 Page({
 
   /**
@@ -57,6 +58,13 @@ Page({
     })
   },
   buy(){
+    if(!app.globalData.userInfo){
+      wx.showToast({
+        title: '请先登录',
+        icon: "none"
+      })
+      return ;
+    }
     let buyInfo = {
        img: this.data.banner[0],
        name: this.data.good.good_name,

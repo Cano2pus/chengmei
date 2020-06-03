@@ -6,7 +6,8 @@
     "pages/detail/detail",
     "pages/list/list",
     "pages/buy/buy",
-    "pages/addr/addr"
+    "pages/addr/addr",
+    "pages/addAddr/addAddr"
   ],
   "tabBar": {
     "list": [

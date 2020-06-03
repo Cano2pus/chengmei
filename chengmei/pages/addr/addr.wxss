@@ -1,1 +1,20 @@
 /* pages/addr/addr.wxss */
+page{
+  height: 100%;
+}
+.container{
+  background-color: #f1f1f1;
+  display: block;
+}
+.bottom{
+  height: 50px;
+  background-color: red;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

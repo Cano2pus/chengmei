@@ -1,2 +1,14 @@
 <!--pages/addr/addr.wxml-->
-<text>pages/addr/addr.wxml</text>
+<view class="container">
+  <view class="list">
+    <view class="item" wx:for="{{list}}" wx:key="index">
+      <view><text>收货人：</text>{{item.name}}</view>
+      <view><text>收货地址：</text>{{item.procince}}{{item.city}}{{item.area}}</view>
+      <view>{{good.phone}}</view>
+      <view class="opertion">
+
+      </view>
+    </view>
+  </view>
+  <view class="bottom" bindtap="addAddr">添加新地址</view>
+</view>

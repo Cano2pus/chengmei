@@ -38,12 +38,44 @@ Page({
         'content-type': 'application/json'
       },
       success(res){
-        console.log(res);
+        if(res.code == 2000){
+          wx.login({
+            success: res => {
+              wx.request({
+                url: 'http://chengmei_dev.wanxikeji.cn/api/useCodeGetOpenId',
+                method: "POST",
+                data: {
+                  code: res.code
+                },
+                header: {
+                  "content-type": "appliction/json"
+                },
+                success(result){
+                  if(result.data.data.info){
+                    app.globalData.userInfo = result.data.data.info;
+                    this.setData({
+                      info: result.data.data.info,
+                      avatarUrl: result.data.data.info.icon
+                    })
+                  }
+                }
+              })
+            }
+          })
+        }
       }
     })
-    // this.setData({
-    //   info: e.detail.userInfo,
-    //   avatarUrl: e.detail.userInfo.avatarUrl
-    // })
+  },
+  toAddr(){
+    if(!app.globalData.userInfo){
+      wx.showToast({
+        title: '请先登录',
+        icon: "none"
+      })
+      return ;
+    }
+    wx.navigateTo({
+      url: '../addr/addr',
+    })
   }
 })
