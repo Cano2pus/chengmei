@@ -1,12 +1,18 @@
 <!--pages/addr/addr.wxml-->
 <view class="container">
   <view class="list">
-    <view class="item" wx:for="{{list}}" wx:key="index">
-      <view><text>收货人：</text>{{item.name}}</view>
-      <view><text>收货地址：</text>{{item.procince}}{{item.city}}{{item.area}}</view>
-      <view>{{good.phone}}</view>
+    <view class="item" wx:for="{{list}}" wx:key="index" bindtap="selectAddr" data-id="{{item}}">
+      <view class="info"><text>收货人：</text>{{item.name}}</view>
+      <view class="info"><text>收货地址：</text>{{item.procince}}{{item.city}}{{item.area}}</view>
+      <view class="phone">{{item.phone}}</view>
       <view class="opertion">
-
+        <label bindtap="setDefaultAddr" data-addrid="{{item.address_id}}">
+          <radio checked="{{item.default == 1}}">默认地址</radio>
+        </label>
+        <view>
+          <view bindtap="editAddr" data-addrid="{{item}}"><icon class="iconfont icon-edit"></icon> 编辑</view>
+          <view bindtap="deleteAddr" data-addrid="{{item.address_id}}"><icon class="iconfont icon-delete"></icon> 删除</view>
+        </view>
       </view>
     </view>
   </view>

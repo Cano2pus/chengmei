@@ -1,2 +1,28 @@
 <!--pages/addAddr/addAddr.wxml-->
-<text>pages/addAddr/addAddr.wxml</text>
+<view class="container">
+  <view class="form">
+    <view class="form-item">
+      <text>收货人</text>
+      <input placeholder="收货人姓名" bindinput="setName" value="{{name}}"></input>
+    </view>
+    <view class="form-item">
+      <text>联系电话</text>
+      <input placeholder="联系电话" bindinput="setPhone" value="{{phone}}"></input>
+    </view>
+    <view class="form-item">
+      <text>收货地址</text>
+      <picker mode="region" value="{{region}}" bindchange="bindRegionChange">
+          <view class="picker" wx:if="{{region.length == 0}}">请选择</view>
+          <view wx:else class="picker">
+            {{region[0]}} {{region[1]}} {{region[2]}}
+          </view>
+      </picker>
+    </view>
+    <view class="form-item">
+      <text>详细地址</text>
+      <input placeholder="详细地址，如区域、街道、小区" bindinput="setDetail" value="{{detail}}"></input>
+    </view>
+    <button type="primary">授权一键获取</button>
+  </view>
+  <view class="bottom" bindtap="addAddr">保存</view>
+</view>

@@ -69,7 +69,8 @@ Page({
        img: this.data.banner[0],
        name: this.data.good.good_name,
        num: this.data.num,
-       price: this.data.good.price
+       price: this.data.good.price,
+       goodid: this.data.good.good_id
     }
     
     wx.navigateTo({

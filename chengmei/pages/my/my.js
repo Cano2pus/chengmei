@@ -25,14 +25,13 @@ Page({
   },
   getUserInfo(e) {
     app.globalData.userInfo = e.detail.userInfo
-    let openId = wx.getStorageSync('openid');
     wx.request({
       url: 'http://chengmei_dev.wanxikeji.cn/api/register',
       data: {
         nick_name: e.detail.userInfo.nickName,
         icon: e.detail.userInfo.avatarUrl,
         sex: e.detail.userInfo.gender,
-        openid: openId
+        openid: e.detail.userInfo.openid
       },
       header: {
         'content-type': 'application/json'

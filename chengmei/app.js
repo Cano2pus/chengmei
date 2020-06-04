@@ -16,7 +16,6 @@ App({
             "content-type": "appliction/json"
           },
           success(result){
-            wx.setStorageSync('openid', result.data.data.openid)
             if(result.data.data.info){
               that.globalData.userInfo = result.data.data.info
             }

@@ -1,1 +1,50 @@
 /* pages/addAddr/addAddr.wxss */
+page{
+  height: 100%;
+}
+.container{
+  background-color: #f1f1f1;
+  display: block;
+}
+.bottom{
+  height: 50px;
+  background-color: red;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+.form{
+  background-color: #fff;
+  font-size: 16px;
+  color: #333;
+}
+.form-item{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+}
+.form-item text{
+  display: inline-block;
+  width: 20%;
+}
+.form-item input{
+  width: 80%;
+  font-size: 15px;
+}
+.form-item picker{
+  width: 80%;
+}
+.form-item .picker{
+  width: 100%;
+  color: #999;
+}
