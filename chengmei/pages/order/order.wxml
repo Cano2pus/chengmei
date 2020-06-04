@@ -1,0 +1,30 @@
+<!--pages/order/order.wxml-->
+<view class="container">
+  <view class="tab">
+    <view class="tabitem {{state == 1?'curr': ''}}" bindtap="changeTab" data-tab="1">
+      <text>待发货</text>
+    </view>
+    <view class="tabitem {{state == 2?'curr': ''}}" bindtap="changeTab" data-tab="2">
+      <text>待收货</text>
+    </view>
+    <view class="tabitem {{state == 3?'curr': ''}}" bindtap="changeTab" data-tab="3">
+      <text>已完成</text>
+    </view>
+  </view>
+  <view class="order-item" wx:for="{{list}}" wx:key="index">
+    <view class="order-id">订单编号：{{item.create_time}}</view>
+    <view class="order-info">
+      <image class="order-img" src="{{item.img}}" mode="aspectFit"></image><view class="order-txt">
+        <view class="order-name">{{item.good_name}}</view>
+        <view class="num-price">
+          <text>x{{item.num}}</text>
+          <text class="price">{{item.price}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="confirm">
+      <text>总计：￥{{item.money}}</text>
+      <button size="mini" bindtap="cancelOrder" data-orderid="{{item.order_id}}">取消订单</button>
+    </view>
+  </view>
+</view>

@@ -26,8 +26,6 @@ Page({
         region: [address.procince,address.city,address.area],
         detail: address.detailed
       })
-      console.log(address);
-      
     }
     
   },

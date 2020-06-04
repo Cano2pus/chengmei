@@ -9,24 +9,24 @@
     <view class="addr" bindtap="toAddr"><icon class="iconfont icon-addressfill"></icon><text>收货地址</text></view>
   </view>
   <view class="order">
-    <view class="order-title">我的订单</view>
+    <view class="order-title" bindtap="toOrder" data-state="1">我的订单</view>
     <view class="order-itembox">
-      <view class="order-item">
+      <view class="order-item" bindtap="toOrder" data-state="1">
       <icon class="iconfont icon-huoche"></icon>
       <view>待发货</view>
     </view>
-    <view class="order-item">
+    <view class="order-item" bindtap="toOrder" data-state="2">
       <icon class="iconfont icon-baoguo"></icon>
       <view>待收货</view>
     </view>
-    <view class="order-item">
+    <view class="order-item" bindtap="toOrder" data-state="3">
       <icon class="iconfont icon-shouye"></icon>
       <view>已完成</view>
     </view>
     </view>
-    <view class="order-title">待发货<icon class="iconfont icon-arrow"></icon></view>
-    <view class="order-title">待收货<icon class="iconfont icon-arrow"></icon></view>
-    <view class="order-title">已完成<icon class="iconfont icon-arrow"></icon></view>
+    <view class="order-title" bindtap="toOrder" data-state="1">待发货<icon class="iconfont icon-arrow"></icon></view>
+    <view class="order-title" bindtap="toOrder" data-state="2">待收货<icon class="iconfont icon-arrow"></icon></view>
+    <view class="order-title" bindtap="toOrder" data-state="3">已完成<icon class="iconfont icon-arrow"></icon></view>
     <view class="order-title">个人信息<icon class="iconfont icon-arrow"></icon></view> 
   </view>
 </view>

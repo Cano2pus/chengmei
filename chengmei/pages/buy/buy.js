@@ -41,9 +41,12 @@ Page({
         wx.showToast({
           title: res.data.msg,
           icon: "none"
-        })
+        });
+      
         if(res.data.code == 2000){
-          wx.navigateBack({});
+          setTimeout(function(){
+            wx.navigateBack({});
+          }, 2000)
         }
       }
     })

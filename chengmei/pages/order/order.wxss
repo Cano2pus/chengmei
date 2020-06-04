@@ -1,0 +1,86 @@
+/* pages/order/order.wxss */
+.container{
+  background-color: #f1f1f1;
+  display: block;
+}
+
+.tab{
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  padding-bottom: 5px;
+}
+.tabitem{
+  width: 33.3333%;
+  text-align: center;
+  display: inline-block;
+}
+.tabitem text{
+  padding: 10px 0;
+  display: inline-block;
+}
+.curr text{
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+.order-item{
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+.order-id{
+  border-bottom: 1px solid #ccc;
+}
+.order-info{
+  height: 100px;
+  margin: 10px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.order-info image{
+  width: 40%;
+  height: 100%;
+}
+.order-txt{
+  width: 60%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+.order-name{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.num-price{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.num-price text{
+  margin: 0 10px;
+}
+.order-txt .price{
+  color: red;
+}
+
+.order-item .confirm{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container button{
+  margin: 0;
+}
