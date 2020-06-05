@@ -74,9 +74,7 @@ Page({
           title: res.data.msg,
           icon: "none"
         })
-        wx.navigateTo({
-          url: '../addr/addr',
-        })
+        wx.navigateBack({});
       }
     })
   }

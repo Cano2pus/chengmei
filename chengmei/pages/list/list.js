@@ -41,7 +41,7 @@ Page({
       type: JSON.parse(options.type)
     })
 
-    data.good_parent_type = this.data.type.good_type_id
+    data.good_parent_type = this.data.type.good_type_id;
     this.getList(data);
     
   },

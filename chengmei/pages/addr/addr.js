@@ -77,5 +77,8 @@ Page({
     })
 
     wx.navigateBack({});
+  },
+  onShow(){
+    this.getList();
   }
 })

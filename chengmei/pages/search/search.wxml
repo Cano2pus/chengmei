@@ -1,7 +1,7 @@
 <!--pages/search/search.wxml-->
 <view class="container">
   <view class="top">
-    <input bindinput="setSearch" bindconfirm="searchSubmit" value="{{search}}"></input>
+    <input bindinput="setSearch" bindconfirm="searchSubmit" value="{{search}}" confirm-type="search"></input>
     <text size="mini" bindtap="home">取消</text>
   </view>
   <view class="history">

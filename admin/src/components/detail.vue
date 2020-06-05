@@ -174,7 +174,8 @@ export default {
     if (JSON.stringify(this.form) == "{}") {
       this.$router.push({ name: "goods" });
     }
-
+    console.log(this.form);
+    
     axios({
       method: "post",
       url: this.$store.getters.getDomain + "api/admin/goodsTypeList",

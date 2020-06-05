@@ -123,6 +123,17 @@ export default {
           ]
         },
         {
+          name: "订单管理",
+          icon: "iconfont icon-yonghu",
+          submenu: [
+            {
+              name: "订单信息",
+              icon: "iconfont icon-yonghu",
+              path: "/index/order"
+            }
+          ]
+        },
+        {
           name: "账号管理",
           icon: "iconfont icon-admin",
           submenu: [
@@ -305,7 +316,7 @@ export default {
 }
 .crumbs {
   display: inline-block;
-  /* margin-left: 20px; */
+  margin-left: 220px;
   height: 100%;
 }
 .crumbs i {
@@ -342,13 +353,11 @@ export default {
 }
 .el-dialog__header {
   background-color: #545c64;
+  height: 22px;
 }
 .el-dialog__title,
 .el-dialog__headerbtn .el-dialog__close {
   color: white;
-}
-.el-table .cell {
-  white-space: nowrap;
 }
 .el-form-item__label {
   float: none;

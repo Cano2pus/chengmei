@@ -12,6 +12,7 @@ import adv from '@/components/adv'
 import banner from '@/components/banner'
 import users from '@/components/users'
 import detail from '@/components/detail'
+import order from '@/components/order'
 
 Vue.use(Router)
 
@@ -106,6 +107,14 @@ export default new Router({
           path: '/index/detail',
           name: 'detail',
           component: detail,
+          meta: {
+            requireLogin: true
+          }
+        },
+        {
+          path: '/index/order',
+          name: 'order',
+          component: order,
           meta: {
             requireLogin: true
           }

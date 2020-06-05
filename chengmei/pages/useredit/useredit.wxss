@@ -1,0 +1,25 @@
+/* pages/useredit/useredit.wxss */
+page{
+  height: 100%;
+  background-color: #f1f1f1;
+}
+.container{
+  flex-direction: row;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.container button{
+  margin: 0;
+  width: 20%;
+  background-color: red;
+  color: white;
+}
+.container input{
+  width: 70%;
+  background-color: #fff;
+  padding: 5px;
+  font-size: 16px;
+  color: #333;
+  border-radius: 4px;
+}

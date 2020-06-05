@@ -22,7 +22,6 @@
       <text>详细地址</text>
       <input placeholder="详细地址，如区域、街道、小区" bindinput="setDetail" value="{{detail}}"></input>
     </view>
-    <button type="primary">授权一键获取</button>
   </view>
   <view class="bottom" bindtap="addAddr">保存</view>
 </view>

@@ -1,2 +1,15 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="container">
+  <view class="user-item" bindtap="selectPic">
+    <view class="user-title">头像</view>
+    <view class="user-content"><image src="{{info.icon}}" mode="aspectFit"></image><icon class="iconfont icon-arrow"></icon></view>
+  </view>
+  <view class="user-item" bindtap="editNickName">
+    <view class="user-title">昵称</view>
+    <view class="user-content">{{info.nick_name}}<icon class="iconfont icon-arrow"></icon></view>
+  </view>
+  <view class="user-item" bindtap="editPhone">
+    <view class="user-title">手机号</view>
+    <view class="user-content">{{info.phone}}<icon class="iconfont icon-arrow"></icon></view>
+  </view>
+</view>

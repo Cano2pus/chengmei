@@ -35,10 +35,10 @@ page{
 }
 .form-item text{
   display: inline-block;
-  width: 20%;
+  width: 23%;
 }
 .form-item input{
-  width: 80%;
+  width: 77%;
   font-size: 15px;
 }
 .form-item picker{

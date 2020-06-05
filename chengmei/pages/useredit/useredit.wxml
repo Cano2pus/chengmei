@@ -1,0 +1,5 @@
+<!--pages/useredit/useredit.wxml-->
+<view class="container">
+  <input value="{{value}}" bindinput="edit"></input>
+  <button size="mini" bindtap="confirm">修改</button>
+</view>

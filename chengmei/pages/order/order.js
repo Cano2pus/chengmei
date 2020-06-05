@@ -68,5 +68,8 @@ Page({
   },
   cancelOrder(e){
     this.handleRequest("cancelOrder", e.currentTarget.dataset.orderid)
+  },
+  confirmOrder(e){
+    this.handleRequest("takeGood", e.currentTarget.dataset.orderid)
   }
 })

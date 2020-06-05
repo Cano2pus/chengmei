@@ -2,8 +2,8 @@
 <view class="container">
   <view class="users">
     <view class="info">
-      <image src="{{avatarUrl}}" mode="aspectFit"></image>
-      <text>{{info.nick_name}}</text>
+      <image src="{{avatarUrl}}" bindtap="toUser"></image>
+      <text bindtap="toUser">{{info.nick_name}}</text>
       <button open-type="getUserInfo" size="mini" bindgetuserinfo="getUserInfo" wx:if="{{info == null}}">点击登录</button>
     </view>
     <view class="addr" bindtap="toAddr"><icon class="iconfont icon-addressfill"></icon><text>收货地址</text></view>
@@ -27,7 +27,7 @@
     <view class="order-title" bindtap="toOrder" data-state="1">待发货<icon class="iconfont icon-arrow"></icon></view>
     <view class="order-title" bindtap="toOrder" data-state="2">待收货<icon class="iconfont icon-arrow"></icon></view>
     <view class="order-title" bindtap="toOrder" data-state="3">已完成<icon class="iconfont icon-arrow"></icon></view>
-    <view class="order-title">个人信息<icon class="iconfont icon-arrow"></icon></view> 
+    <view class="order-title" bindtap="toUser">个人信息<icon class="iconfont icon-arrow"></icon></view> 
   </view>
 </view>
 

@@ -9,7 +9,8 @@
     "pages/addr/addr",
     "pages/addAddr/addAddr",
     "pages/order/order",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/useredit/useredit"
   ],
   "tabBar": {
     "list": [
