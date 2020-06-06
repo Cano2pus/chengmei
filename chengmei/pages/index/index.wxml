@@ -14,7 +14,7 @@
   </view>
   <!-- 分类 -->
   <view class="classify">
-    <view class="classify-item" wx:for="{{type}}" wx:key="index" bindtap="tolist" data-classify="{{item}}">
+    <view class="classify-item" wx:for="{{type}}" wx:key="index" bindtap="tolist" data-classify="{{item.good_type_id}}">
       <view class="classify-itembox">
         <image  src="{{item.good_type_img}}" mode="aspectFit"></image>
         <text class="type-name">{{item.type_name}}</text>
@@ -25,7 +25,7 @@
   <view class="good-list" wx:for="{{list}}" wx:key="index">
     <view class="good-title">
       <view class="good-title-txt">{{item.name}}</view>
-      <view class="more">更多 <icon class="iconfont icon-arrow"></icon></view>
+      <view class="more" bindtap="tolist" data-classify="{{item.type_id}}">更多 <icon class="iconfont icon-arrow"></icon></view>
     </view>
     <view class="good-listbox">
       <view class="good-list-item" bindtap="todetail" data-item="{{good}}" wx:for="{{item.children}}" wx:for-item="good" wx:for-index="index2" wx:key="index2">

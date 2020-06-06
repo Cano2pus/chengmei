@@ -33,14 +33,12 @@ export default {
           pw: this.pw
         }
       }).then( res => {
-        if(res.data.code == 2000){
+        console.log(res);
+        
           sessionStorage.setItem("token", res.data.data.token);
           sessionStorage.setItem("logined", res.data.data.admin_name);
           this.$store.commit("setToken", res.data.data.token);
           this.$router.push({name: 'index'});
-        }else{
-          this.$message.error(res.data.msg);
-        }
       })
     }
   }

@@ -38,10 +38,13 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      type: JSON.parse(options.type)
+      typeid: options.typeid,
+      type: JSON.parse(wx.getStorageSync('type')).filter(item => {
+        return item.good_type_id == options.typeid;
+      })[0]
     })
 
-    data.good_parent_type = this.data.type.good_type_id;
+    data.good_parent_type = this.data.typeid;
     this.getList(data);
     
   },

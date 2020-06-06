@@ -90,6 +90,7 @@ page{
   padding-left: 20px;
   color: red;
   box-sizing: border-box;
+  letter-spacing: 3px;
 }
 .submit{
   width: 40%;

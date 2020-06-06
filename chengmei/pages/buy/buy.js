@@ -24,6 +24,13 @@ Page({
     })
   },
   submitOrder(){
+    if(this.data.address == null){
+      wx.showToast({
+        title: "请选择收货地址",
+        icon: "none"
+      });
+      return ;
+    }
     let that = this;
     wx.request({
       url: 'http://chengmei_dev.wanxikeji.cn/api/addOrder',

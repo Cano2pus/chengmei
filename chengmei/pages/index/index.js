@@ -31,6 +31,7 @@ Page({
         that.setData({
           type: that.handleType(res.data.data, 0)
         })
+        wx.setStorageSync('type', JSON.stringify(that.data.type));
       }
     })
 
@@ -72,6 +73,7 @@ Page({
       if(index < 0){
         tmp.push({
           name: val[i].good_type,
+          type_id: val[i].type_parent_id,
           children: [val[i]]
         });
       }else{
@@ -87,7 +89,7 @@ Page({
   },
   tolist(e){
     wx.navigateTo({
-      url: '../list/list?type=' + JSON.stringify(e.currentTarget.dataset.classify)
+      url: '../list/list?typeid=' + JSON.stringify(e.currentTarget.dataset.classify)
     })
   }
 })

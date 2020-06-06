@@ -9,7 +9,8 @@ import 'mavon-editor/dist/css/index.css'
 import * as fl from '@/filter/index.js';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-import '@/assets/font/iconfont.css'
+import '@/assets/font/iconfont.css';
+import axios from "axios";
 
 Vue.config.productionTip = false
 
@@ -46,3 +47,32 @@ router.beforeEach((to, from, next)=>{
     next()
   }
 });
+
+axios.interceptors.request.use(
+  config => {
+    // console.log(store.state);
+    
+    // console.log(config);
+    
+    return config
+  }, error => {
+    return Promise.reject(error);
+  }
+)
+
+axios.interceptors.response.use(
+  res => {
+    console.log(res);
+    
+    if(res.data.code != 2000){
+      ElementUI.Message.error(res.data.msg);
+    }else if(res.data.code == 2013){
+      router.push({name: "login"});
+      ElementUI.Message.error(res.data.msg);
+    }else{
+      return res
+    }
+  }, error => {
+    return Promise.reject(error);
+  }
+)

@@ -35,10 +35,10 @@
         </el-select>
       </el-form-item>
       <el-form-item label="商品颜色：">
-        <el-input v-model="form.colour"></el-input>
+        <el-input v-model="colour"></el-input>
       </el-form-item>
       <el-form-item label="商品种类：">
-        <el-input v-model="form.edition"></el-input>
+        <el-input v-model="edition"></el-input>
       </el-form-item>
       <el-form-item label="商品封面：">
         <template>
@@ -68,13 +68,23 @@
             name="img"
           >
             <img v-if="form.img" :src="form.img" alt />
-            <i v-else class="el-icon-plus pic-uploader-icon"></i>
+            <i class="el-icon-plus pic-uploader-icon"></i>
           </el-upload>
         </template>
       </el-form-item>
       <el-form-item label="详情：">
-          <mavon-editor ref="md" v-model="context" :toolBar="toolBar" @change="change" @imgAdd="imgadd"></mavon-editor>
+        <mavon-editor
+          ref="md"
+          v-model="context"
+          :toolBar="toolBar"
+          @change="change"
+          @imgAdd="imgadd"
+        ></mavon-editor>
       </el-form-item>
+      <div class="opertionBtn">
+        <el-button>取消</el-button>
+        <el-button type="primary">确定</el-button>
+      </div>
     </el-form>
   </div>
 </template>
@@ -110,7 +120,11 @@ export default {
         /* 1.4.2 */
         navigation: true // 导航目录
       },
-      html: ""
+      html: "",
+      imgs: "",
+      info: "",
+      edition: "",
+      colour: ""
     };
   },
   computed: {
@@ -175,7 +189,7 @@ export default {
       this.$router.push({ name: "goods" });
     }
     console.log(this.form);
-    
+
     axios({
       method: "post",
       url: this.$store.getters.getDomain + "api/admin/goodsTypeList",
@@ -184,6 +198,20 @@ export default {
       }
     }).then(res => {
       this.type = this.handleType(res.data.data, 0);
+    });
+
+    axios({
+      method: "post",
+      url: this.$store.getters.getDomain + "api/admin/goodInfo",
+      data: {
+        token: this.$store.getters.getToken,
+        good_id: this.form.good_id
+      }
+    }).then(res => {
+      this.context = JSON.parse(res.data.data.info[0].info);
+      this.imgs = JSON.parse(res.data.data.info[0].imgs);
+      this.edition = JSON.parse(res.data.data.info[0].edition);
+      this.colour = JSON.parse(res.data.data.info[0].colour);
     });
   }
 };
